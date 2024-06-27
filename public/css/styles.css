@@ -1,0 +1,511 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ebebeb;
+    margin: 0px;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+}
+
+header {
+    background-color: #EAC926;
+}
+
+p {
+    font-size: 12px;
+}
+
+article {
+    margin-top: 10px;
+    background-color: white;
+}
+
+.top-container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo-mercado-liebre {
+
+    width: 50%;
+}
+
+.logo-mercado-liebre img {
+    width: 40vw;
+}
+
+.buscador {
+    display: flex;
+    width: 50%;
+}
+
+.buscador form input, button{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+}
+
+.header__text {
+    text-align: center;
+    font-size: medium;
+    padding: 15px 0px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.list-menu li {
+    margin: 0px 10px;
+}
+
+.list-menu li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-menu li i {
+    margin-left: 10px;
+}
+
+.registro,
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+
+.formulario h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.formulario h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formulario div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="date"],
+.formulario input[type="password"],
+.formulario input[type="file"],
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.formulario input[type="checkbox"],
+.formulario input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.formulario input[type="submit"],
+.formulario input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.formulario input[type="reset"] {
+    background-color: #ccc;
+    margin-top: 5px;
+}
+
+.formulario input[type="reset"]:hover,
+.formulario input[type="submit"]:hover {
+    background-color: #2968c8;
+    /* background-color: #0022AA; */
+}
+
+/* CSS Styles for Error Handling */
+
+/* Estilo para mensajes de error - inicialmente oculto */
+.error-message {
+    display: none; /* Oculta el mensaje de error por defecto */
+    color: red; /* Color del texto del mensaje de error */
+    font-size: 12px; /* Tamaño de la fuente del mensaje de error */
+    margin-top: 5px; /* Espacio arriba del mensaje de error */
+}
+
+.error-message i {
+    margin: 0px 7px;
+}
+
+/* Estilo para campos inválidos */
+form.submitted input:invalid {
+    border: 2px solid red; /* Borde rojo para campos inválidos */
+}
+/* Estilo para campos inválidos */
+form input:invalid:focus {
+    border: 2px solid red; /* Borde rojo para campos inválidos */
+}
+
+input:focus-visible{
+    outline: none; 
+}
+
+
+/* Muestra el mensaje de error cuando el campo es inválido y enfocado */
+input:invalid:focus ~ .error-message {
+    display: block; /* Muestra el mensaje de error */
+}
+
+/* Muestra el mensaje de error después de intentar enviar el formulario */
+form.submitted input:invalid ~ .error-message {
+    display: block; /* Muestra el mensaje de error */
+}
+
+.precios {
+    font-size: 18px;
+    width: 30%;
+    flex: 1;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.descuento {
+    font-size: 16px;
+    color: rgb(31, 196, 31);
+    width: 70%;
+    flex: 1;
+    text-align: left;
+
+}
+
+.camion-icon {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: solid 1px rgb(31, 196, 31);
+    color: rgb(31, 196, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    font-size: 16px;
+}
+
+.descripcion {
+    padding-top: 30px;
+    font-size: 16px;
+    color: grey;
+}
+
+.burger-menu {
+    color: white;
+    padding: 10px;
+    background-color: #1259c3;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.article__info {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    line-height: 5px;
+    position: relative;
+
+}
+
+.descuento-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.products section article div img {
+    max-width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.banner-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 25vw;
+}
+
+.products h3 {
+    text-align: left;
+    font-size: 24px;
+    color: rgb(85, 85, 85);
+    margin: 15px 0px;
+}
+
+.product-desc-box>.product-delivery-icon {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.product-desc-box {
+    position: relative;
+}
+
+.footer-container {
+    display: block;
+    background-color: white;
+    text-align: center;
+    color: rgb(85, 85, 85);
+}
+
+.footer-container i {
+    margin-bottom: 10px;
+}
+
+.footer-container div p {
+    margin: 0;
+    padding: 30px;
+}
+
+.footer-container section {
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.footer-container section h4 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.section__text {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section__text p {
+    font-size: 13px;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+.footer-container section i {
+    font-size: 2em;
+    color: #1259c3;
+}
+
+/* Ocultar la descripción por defecto */
+.article__info .descripcion {
+    opacity: 0;
+}
+
+/* Mostrar la descripción al pasar el mouse sobre el artículo */
+article:hover .descripcion {
+    opacity: 1;
+}
+
+/* Añadir sombra al pasar el mouse sobre el artículo */
+article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Transición suave para el ícono del camión */
+.camion-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Transformación al pasar el mouse por encima */
+article:hover .camion-icon {
+    transform: rotate(-90deg);
+}
+
+.footer-container section:hover i{
+    color: #EAC926;
+    transition: 300ms;
+}
+
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-wrapper input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Padding para dar espacio al icono */
+    box-sizing: border-box;
+}
+
+.search-wrapper .search-button {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Ajusta según sea necesario */
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #333; /* Color del ícono */
+    font-size: 16px; /* Tamaño del ícono */
+}
+
+.search-wrapper .search-button i {
+    pointer-events: none; /* Para que el ícono no interfiera con el clic del botón */
+}
+
+
+@media (max-width: 430px) {
+
+    .top-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        /* Asegura que las cards se apilen verticalmente */
+        align-items: center;
+        /* Centra las cards horizontalmente */
+        width: 100%;
+        /* Ocupa el 100% del ancho del contenedor */
+    }
+
+
+    article {
+        width: 90%;
+        /* Ocupa el 100% del ancho del contenedor */
+        margin: 10px 5%;
+        /* Añade márgenes verticales para espaciado */
+    }
+
+
+    nav {
+        display: none;
+    }
+}
+
+
+@media (min-width: 680px) {
+    .logo-mercado-liebre {
+        margin: 0px 5px;
+    }
+
+    .buscador {
+        margin: 0px 5px;
+        width: 30%;
+    }
+
+    .header__text {
+        margin: 0px 5px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .banner-container img {
+        max-height: 15vh;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    article {
+        width: 49%;
+    }
+
+    .registro form , .login form{
+        width: 40vw;   
+    }
+
+}
+
+@media(min-width: 1360px) {
+    .banner-container img {
+        max-height: 23vh;
+    }
+
+
+    article {
+        width: 24%;
+    }
+
+    .footer-container {
+        margin-top: 5vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-container section {
+        width: 33%;
+    }
+
+
+}
